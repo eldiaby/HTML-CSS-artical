@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -66,14 +67,15 @@ h4 {
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 30px;
 }
 
-article {
+/*article {
     margin: 60px;
-}
+}*/
 
 .post-header {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 
 p {
@@ -105,6 +107,13 @@ li:last-child {
     font-size: 16px;
 }
 
+
+.post-img {
+    width: 100%;
+    height: auto;
+    }
+
+
 /*article header p {
     font-style: italic;
 }*/
@@ -120,7 +129,7 @@ li:last-child {
 }
 
 .container {
-    width: 700px;
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -131,13 +140,12 @@ li:last-child {
 .main-header {
     background-color: #f7f7f7;
     padding: 40px 20px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 
 nav a:link {
     display: inline-block;
     margin-right: 20px;
-    margin-top: 10px;
 }
 
 nav a:link:last-child {
@@ -148,10 +156,10 @@ aside {
     background-color: #f7f7f7;
     border-top: 5px solid #1098ad;
     border-bottom: 5px solid #1098ad;
-    padding: 40px 0;
+    padding: 40px 30px;
 }
 
-article p:last-child {
+article>p:last-child {
     color: red;
 }
 
@@ -187,4 +195,125 @@ button {
     position: absolute;
     bottom: 50px;
     right: 50px;
+}
+
+/*trying the float proberty
+.author-photo {
+    float: left;
+}
+
+#author {
+    float: left;
+    margin-bottom: 25px;
+}
+
+h1 {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+}
+
+article {
+    width: 825px;
+    float: left;
+}
+
+aside {
+    width: 300px;
+    float: right;
+
+}
+
+footer {
+    clear: both;
+}*/
+
+/*
+    trying the float proberty
+*/
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.author {
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+.related-post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.related-author {
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.related-link:link {
+    font-size: 17px;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.flextest {
+    display: flex;
+    gap: 75px;
+}
+/*
+article {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+aside {
+    align-self: flex-start;
+    flex: 0 0 300px;
+}*/
+
+
+/* CSS Grid */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    column-gap: 75px;
+    row-gap: 30px;
+}
+
+.main-header {
+    grid-column: 1/-1; 
+}
+
+article {
+
+}
+
+aside {
+    align-self: start;
+}
+
+footer {
+    grid-column: 1/-1;
 }
